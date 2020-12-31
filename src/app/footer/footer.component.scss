@@ -1,0 +1,113 @@
+footer{
+    width: 100%; height: auto; float: left; background-color: #fff; box-shadow: rgba(0,0,0,.1) 1px 0 8px; padding: 48px 0 102px;  position: fixed; bottom: 0; left: 0; border-radius: 20px 20px 0 0;
+    .row{
+        *{
+            padding: 0 !important;
+        }
+    }
+    .portion{
+        width: 100%; text-align: center; outline-style: none;
+        span{ width: 100%; text-align: center; text-transform: capitalize; font-size: 35px; float: left; color: #9b9b9b;}
+        /*img{ 
+            height: 104px; display: inline-block; margin-bottom: 15px;  opacity: .5; background-image: url(../../assets/images/add.png);
+        }*/
+        .icon{
+            height: 104px; width: 104px; display: inline-block; margin-bottom: 15px;  opacity: .5; background-size: 100%;
+            &.icon1{
+                background-image: url(../../assets/images/add.png);
+            }
+            &.icon2{
+                background-image: url(../../assets/images/magnifier.png);
+            }
+            &.icon3{
+                background-image: url(../../assets/images/list.png);
+            }
+        }
+        
+        
+        &.router-link-active{
+            span{
+                color: #db3022;
+            }
+            .icon{
+                opacity: 1; 
+                &.icon1{
+                    background-image: url(../../assets/images/add2.png);
+                }
+                &.icon2{
+                    background-image: url(../../assets/images/magnifier2.png);
+                }
+                &.icon3{
+                    background-image: url(../../assets/images/list2.png);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1366px){
+    footer{
+        padding: 42px 0 92px;
+        .portion{
+            span{
+                font-size: 32px;
+            }
+            .icon{
+                height: 95px; width: 95px;
+            }
+        }
+    }
+}
+@media only screen and (max-width:1200px){
+    footer{
+        padding: 33px 0 70px;
+        .portion{
+            span{
+                font-size: 28px;
+            }
+            .icon{
+                height: 70px; width: 70px;
+            }
+        }
+    }
+}
+@media only screen and (max-width:1023px){
+    footer{
+        padding: 26px 0 52px;
+        .portion{
+            span{
+                font-size: 20px;
+            }
+            
+            .icon{
+                height: 54px; width: 54px; margin-bottom: 7px;
+            }
+        }
+    }
+}
+@media only screen and (max-width:767px){
+    footer{
+        padding: 14px 18px 26px;
+        .portion{
+            span{
+                font-size: 12px;
+            }
+            .icon{
+                height: 26px; width: 26px; margin-bottom: 4px;
+            }
+        }
+    }
+}
+@media only screen and (max-width:359px){
+    footer{
+        padding: 11px 14px 20px;
+        .portion{
+            span{
+                font-size: 10px;
+            }
+            .icon{
+                height: 22px; width: 22px; margin-bottom: 3px;
+            }
+        }
+    }
+}

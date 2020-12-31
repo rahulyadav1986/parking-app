@@ -1,0 +1,27 @@
+<header>
+    <div class="details" (click)="goBack()"><img src="assets/images/arrow.png" alt="" class="arrow">Add Vehicles Details</div>
+</header>
+<div class="main_back">
+    <form action="">
+        <div class="form-floating">
+            <img src="assets/images/check.png" class="correct" alt="">
+            <img src="assets/images/error.png" class="error" alt="">
+            <input type="email" class="form-control" placeholder="Enter Vehicle Id / Vehicle No" id="floatingInput" required>
+            <label for="floatingInput">Enter Vehicle Id / Vehicle No</label>
+        </div>
+        <div class="form-floating qr" (click)="openbaby()">
+            <img src="assets/images/qr_code.png" alt="">
+            <input type="text" disabled class="form-control" placeholder="Vehicle No" id="floatingInput" required>
+            <label for="floatingInput">SCAN QR CODE </label>
+        </div>
+        
+        <button class="btn btn-danger" type="submit">Find vehicle</button>
+    </form>
+   
+
+</div>
+
+<div id="interactive" *ngIf="open"  class="viewport">
+    <!-- QuaggaJS will populate this element -->
+  </div>
+

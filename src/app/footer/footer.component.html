@@ -1,0 +1,32 @@
+<ng-container 
+*ngIf="router.url === '/login'; then blankfooter; else mainfooter">
+</ng-container>
+
+<ng-template #blankfooter></ng-template>
+<ng-template #mainfooter>
+    <footer>
+        <div class="row">
+            <div class="col-3">
+                <div class="portion" [routerLink]="['/add-vehicle']" routerLinkActive="router-link-active">
+                    <!--<img src="assets/images/add.png" alt="">-->
+                    <div class="icon icon1"></div>
+                    <span>add vehicle</span>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="portion" [routerLink]="['/search-vehicle']" routerLinkActive="router-link-active">
+                    <!--<img src="assets/images/magnifier.png" alt="">-->
+                    <div class="icon icon2"></div>
+                    <span>search vehicle</span>
+                </div>
+            </div>
+            <div class="col-3" >
+                <div class="portion" [routerLink]="['/vehicle-list']" routerLinkActive="router-link-active">
+                    <!--<img src="assets/images/list.png" alt="">-->
+                    <div class="icon icon3"></div>
+                    <span>all vehicle</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</ng-template>

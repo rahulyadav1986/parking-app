@@ -1,0 +1,77 @@
+<header>
+    <div class="details" (click)="goBack()"><img src="assets/images/arrow.png" alt="" class="arrow">Add Vehicles Details</div>
+</header>
+<div class="main_back">
+    <form action="">
+        <div class="form-floating">
+            <img src="assets/images/check.png" class="correct" alt="">
+            <img src="assets/images/error.png" class="error" alt="">
+            <input type="email" class="form-control" placeholder="Vehicle Id (Auto Generate / Non-editable)" id="floatingInput" required>
+            <label for="floatingInput">Vehicle Id (Auto Generate / Non-editable) </label>
+        </div>
+        <div class="form-floating">
+            <img src="assets/images/check.png" class="correct" alt="">
+            <img src="assets/images/error.png" class="error" alt="">
+            <input type="email" class="form-control" placeholder="Vehicle No" id="floatingInput" required>
+            <label for="floatingInput">Vehicle No </label>
+        </div>
+        <div class="form-floating">
+            <img src="assets/images/check.png" class="correct" alt="">
+            <img src="assets/images/error.png" class="error" alt="">
+            <input type="email" class="form-control" placeholder="Vehicle Type" id="floatingInput" required>
+            <label for="floatingInput">Vehicle Type </label>
+        </div>
+        <div class="form-floating">
+            <img src="assets/images/check.png" class="correct" alt="">
+            <img src="assets/images/error.png" class="error" alt="">
+            <input type="email" class="form-control" placeholder="Name" id="floatingInput" required>
+            <label for="floatingInput">Name </label>
+        </div>
+        <div class="form-floating">
+            <img src="assets/images/check.png" class="correct" alt="">
+            <img src="assets/images/error.png" class="error" alt="">
+            <input type="email" class="form-control" placeholder="Mobile No" id="floatingInput" required>
+            <label for="floatingInput">Mobile No </label>
+        </div>
+        <div class="form-floating">
+            <img src="assets/images/check.png" class="correct" alt="">
+            <img src="assets/images/error.png" class="error" alt="">
+            <input type="datetime-local" class="form-control" placeholder="Date Time" id="floatingInput" required>
+            <label for="floatingInput">Date Time </label>
+        </div>
+        <div class="option_select">
+            <h2>options (Select)</h2>
+            <div class="row">
+                <div class="col-4">
+                    <div class="check_back">
+                        <input type="checkbox" id="loaded">
+                        <label for="loaded"><span>loaded</span></label>
+                    </div>                    
+                </div>
+                <div class="col-4">
+                    <div class="check_back">
+                        <input type="checkbox" id="stepheny">
+                        <label for="stepheny"><span>stepheny</span></label>
+                    </div>                    
+                </div>
+                <div class="col-4">
+                    <div class="check_back">
+                        <input type="checkbox" id="toolkit">
+                        <label for="toolkit"><span>toolkit</span></label>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="form-floating">
+            <img src="assets/images/check.png" class="correct" alt="">
+            <img src="assets/images/error.png" class="error" alt="">
+            <input type="datetime-local" class="form-control" placeholder="Date Time" id="floatingInput" required>
+            <label for="floatingInput">Other Details </label>
+        </div>
+
+        
+        <button class="btn btn-danger" type="submit" [routerLink]="['/search-vehicle']">add vehicle(Print Receipt)</button>
+    </form>
+   
+
+</div>
