@@ -37,7 +37,7 @@ header{
         font-size: 130px; font-weight: 700; text-transform: capitalize; margin-bottom: 320px;
     }
     form{
-        width: 100%; margin: 0 0 360px 0; padding: 0; float: left;
+        width: 100%; margin: 0 0 50px 0; padding: 0; float: left;
         .form-floating{ 
             width: 100%; margin-bottom: 30px; float: left; box-shadow: rgba(0,0,0,.1) 1px 0 8px; border-radius: 10px;
             label{
@@ -264,19 +264,13 @@ header{
 
 
 .viewport {
-    height: 100%;
-    width: 100%;
-    float: left;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #000;
-    z-index: 10;
+    height: 240px;
+    
   }
   
   .viewport::ng-deep video {
     width: 100%;
-    height: 100%;
+    height: 240px;
     object-fit: cover;
   }
   

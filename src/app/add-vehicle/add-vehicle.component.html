@@ -2,41 +2,41 @@
     <div class="details" (click)="goBack()"><img src="assets/images/arrow.png" alt="" class="arrow">Add Vehicles Details</div>
 </header>
 <div class="main_back">
-    <form action="">
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
         <div class="form-floating">
-            <img src="assets/images/check.png" class="correct" alt="">
-            <img src="assets/images/error.png" class="error" alt="">
-            <input type="email" class="form-control" placeholder="Vehicle Id (Auto Generate / Non-editable)" id="floatingInput" required>
+            <img src="assets/images/check.png" *ngIf="!vehicleId.invalid && vehicleId.touched"  class="correct" alt="">
+            <img src="assets/images/error.png" *ngIf="!vehicleId.valid && vehicleId.touched" class="error" alt="">
+            <input type="text" class="form-control" name="vehicleId" ngModel #vehicleId="ngModel" placeholder="Vehicle Id (Auto Generate / Non-editable)" id="floatingInput" required>
             <label for="floatingInput">Vehicle Id (Auto Generate / Non-editable) </label>
         </div>
         <div class="form-floating">
-            <img src="assets/images/check.png" class="correct" alt="">
-            <img src="assets/images/error.png" class="error" alt="">
-            <input type="email" class="form-control" placeholder="Vehicle No" id="floatingInput" required>
+            <img src="assets/images/check.png" *ngIf="!vehicleNo.invalid && vehicleNo.touched"  class="correct" alt="">
+            <img src="assets/images/error.png" *ngIf="!vehicleNo.valid && vehicleNo.touched" class="error" alt="">
+            <input type="text" class="form-control" name="vehicleNo" ngModel #vehicleNo="ngModel" placeholder="Vehicle No" id="floatingInput" required>
             <label for="floatingInput">Vehicle No </label>
         </div>
         <div class="form-floating">
-            <img src="assets/images/check.png" class="correct" alt="">
-            <img src="assets/images/error.png" class="error" alt="">
-            <input type="email" class="form-control" placeholder="Vehicle Type" id="floatingInput" required>
+            <img src="assets/images/check.png" *ngIf="!vehicleType.invalid && vehicleType.touched"  class="correct" alt="">
+            <img src="assets/images/error.png" *ngIf="!vehicleType.valid && vehicleType.touched" class="error" alt="">
+            <input type="text" name="vehicleType" ngModel #vehicleType="ngModel" class="form-control" placeholder="Vehicle Type" id="floatingInput" required>
             <label for="floatingInput">Vehicle Type </label>
         </div>
         <div class="form-floating">
-            <img src="assets/images/check.png" class="correct" alt="">
-            <img src="assets/images/error.png" class="error" alt="">
-            <input type="email" class="form-control" placeholder="Name" id="floatingInput" required>
+            <img src="assets/images/check.png" *ngIf="!name.invalid && name.touched"  class="correct" alt="">
+            <img src="assets/images/error.png" *ngIf="!name.valid && name.touched" class="error" alt="">
+            <input type="text" name="name" ngModel  #name="ngModel" class="form-control" placeholder="Name" id="floatingInput" required>
             <label for="floatingInput">Name </label>
         </div>
         <div class="form-floating">
-            <img src="assets/images/check.png" class="correct" alt="">
-            <img src="assets/images/error.png" class="error" alt="">
-            <input type="email" class="form-control" placeholder="Mobile No" id="floatingInput" required>
+            
+            <img src="assets/images/check.png" *ngIf="!mobileNo.invalid && mobileNo.touched"  class="correct" alt="">
+            <img src="assets/images/error.png" *ngIf="!mobileNo.valid && mobileNo.touched" class="error" alt="">
+            <input type="email" name="mobileNo" ngModel #mobileNo="ngModel" class="form-control" placeholder="Mobile No" id="floatingInput" required>
             <label for="floatingInput">Mobile No </label>
         </div>
         <div class="form-floating">
-            <img src="assets/images/check.png" class="correct" alt="">
-            <img src="assets/images/error.png" class="error" alt="">
-            <input type="datetime-local" class="form-control" placeholder="Date Time" id="floatingInput" required>
+            
+            <input type="datetime-local" name="dateTimeLocal" ngModel  class="form-control" placeholder="Date Time" id="floatingInput" required>
             <label for="floatingInput">Date Time </label>
         </div>
         <div class="option_select">
@@ -44,33 +44,30 @@
             <div class="row">
                 <div class="col-4">
                     <div class="check_back">
-                        <input type="checkbox" id="loaded">
+                        <input type="checkbox" name="loaded" ngModel id="loaded" >
                         <label for="loaded"><span>loaded</span></label>
                     </div>                    
                 </div>
                 <div class="col-4">
                     <div class="check_back">
-                        <input type="checkbox" id="stepheny">
+                        <input type="checkbox" name="stepheny" ngModel id="stepheny" id="stepheny">
                         <label for="stepheny"><span>stepheny</span></label>
                     </div>                    
                 </div>
                 <div class="col-4">
                     <div class="check_back">
-                        <input type="checkbox" id="toolkit">
+                        <input type="checkbox" name="toolkit" ngModel id="toolkit" id="toolkit">
                         <label for="toolkit"><span>toolkit</span></label>
                     </div>                    
                 </div>
             </div>
         </div>
         <div class="form-floating">
-            <img src="assets/images/check.png" class="correct" alt="">
-            <img src="assets/images/error.png" class="error" alt="">
-            <input type="datetime-local" class="form-control" placeholder="Date Time" id="floatingInput" required>
+            
+            <input type="datetime-local" name="otherDetails" ngModel class="form-control" placeholder="Date Time" id="floatingInput" required>
             <label for="floatingInput">Other Details </label>
         </div>
-
-        
-        <button class="btn btn-danger" type="submit" [routerLink]="['/search-vehicle']">add vehicle(Print Receipt)</button>
+        <button class="btn btn-danger" [disabled]="!myForm.valid" type="submit">add vehicle(Print Receipt)</button>
     </form>
    
 

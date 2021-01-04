@@ -20,6 +20,10 @@ header{
     }
 }
 
+.form-control.ng-invalid.ng-touched{
+    border: #db3022 1px solid !important;
+}
+
 @media only screen and (max-width:1366px){
     header{
         height: 214px; padding: 18px 0 0 60px;

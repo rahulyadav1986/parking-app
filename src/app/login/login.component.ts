@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Location } from '@angular/common';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,6 +8,7 @@ import { Location } from '@angular/common';
 })
 export class LoginComponent implements OnInit {
 
+  @ViewChild('myForm') myForm: NgForm
   constructor(private location: Location) { }
   ngOnInit() {
   }
@@ -14,5 +16,10 @@ export class LoginComponent implements OnInit {
     // window.history.back();
     this.location.back();
   }
+  onSubmit() {
+    console.log(this.myForm)
+  }
+
+ 
 
 }

@@ -9,7 +9,7 @@
             <input type="email" class="form-control" placeholder="Enter Vehicle Id / Vehicle No" id="floatingInput" required>
             <label for="floatingInput">Enter Vehicle Id / Vehicle No</label>
         </div>
-        <div class="form-floating qr" (click)="openbaby()">
+        <div class="form-floating qr">
             <img src="assets/images/qr_code.png" alt="">
             <input type="text" disabled class="form-control" placeholder="Vehicle No" id="floatingInput" required>
             <label for="floatingInput">SCAN QR CODE </label>
@@ -18,10 +18,10 @@
         <button class="btn btn-danger" type="submit">Find vehicle</button>
     </form>
    
-
+    <div id="interactive"  class="viewport">
+        <!-- QuaggaJS will populate this element -->
+      </div>
 </div>
 
-<div id="interactive" *ngIf="open"  class="viewport">
-    <!-- QuaggaJS will populate this element -->
-  </div>
+
 

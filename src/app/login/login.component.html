@@ -3,19 +3,21 @@
 </header>
 <div class="main_back">
     <h1>login</h1>
-    <form action="">
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
         <div class="form-floating">
-            <img src="assets/images/check.png" class="correct" alt="">
-            <img src="assets/images/error.png" class="error" alt="">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+            <img src="assets/images/check.png" *ngIf="!email.invalid && email.touched"  class="correct" alt="">
+            <img src="assets/images/error.png" *ngIf="!email.valid && email.touched" class="error" alt="">
+            <input type="email" class="form-control" name="email" email ngModel #email="ngModel" id="floatingInput" placeholder="name@example.com" required>
             <label for="floatingInput">Email</label>
         </div>
 
         <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+            <img src="assets/images/check.png" *ngIf="!password.invalid && password.touched"  class="correct" alt="">
+            <img src="assets/images/error.png" *ngIf="!password.valid && password.touched" class="error" alt="">
+            <input type="password" class="form-control" name="password" ngModel #password="ngModel" id="floatingPassword" placeholder="Password" required>
             <label for="floatingPassword">Password</label>
         </div>
-        <button class="btn btn-danger" type="submit" [routerLink]="['/vehicle-list']">login</button>
+        <button class="btn btn-danger" [disabled]="!myForm.valid" type="submit" [routerLink]="['/vehicle-list']">login</button>
     </form>
    
 
